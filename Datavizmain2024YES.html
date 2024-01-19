@@ -6,16 +6,48 @@
     <title>Rendu Cours Intensif Dataviz / NBA PLAYERS - COUNTRY OF ORIGIN</title>
 </head>
 <body>
-    <h1> Visualisations n°1 </h1>
-    <h2> Données quantitatives:</h2>
-    <p> </p>
+    <h2> Visualisations </h2>
+    <h3> Données quantitatives:</h3>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUEC-6_6h_jkzr7lBeN5rJSKhWSGZWG8W8AhjAIgZ7LPBfrrfwdpsCYRYjUGsTsCGsxAZOI651fjrJ/pubchart?oid=1972502627&amp;format=interactive"></iframe></p>
-    <h2> Données temporelles:</h2>
+    <p></p>
+    <h3> Données temporelles:</h3>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRZxsjMZuj36oOlZaSkRXcuyneUOOfuhNF2TFB3oV3riV2FDETR4MsEoZ_1qZdwFQ9YpPr3Kv4MfuMv/pubchart?oid=1185754650&amp;format=interactive"></iframe></p>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRZxsjMZuj36oOlZaSkRXcuyneUOOfuhNF2TFB3oV3riV2FDETR4MsEoZ_1qZdwFQ9YpPr3Kv4MfuMv/pubchart?oid=1323319109&amp;format=interactive"></iframe> </p>
-    <h2> Données spatiales:</h2>
-    <p> </p>
+    <h3> Données spatiales:</h3>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUEC-6_6h_jkzr7lBeN5rJSKhWSGZWG8W8AhjAIgZ7LPBfrrfwdpsCYRYjUGsTsCGsxAZOI651fjrJ/pubchart?oid=606310759&amp;format=interactive"></iframe> </p>
+    
+    <h2> Visualisation n°2: Chronologie  NBA Players</h2> 
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3FNational_Basketball_Association%20%3Fcountry_of_citizenship%20%3Fcountry_of_citizenshipLabel%20%3Fimage%20%3Fwork_period__start_%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3FNational_Basketball_Association%20wdt%3AP118%20wd%3AQ155223%3B%0A%20%20%20%20wdt%3AP27%20%3Fcountry_of_citizenship%3B%0A%20%20%20%20wdt%3AP18%20%3Fimage%3B%0A%20%20%20%20wdt%3AP2031%20%3Fwork_period__start_.%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>    <h2> Visualisation n°3: Classement photos Basketteurs NBA par "brightness"</h2>
+    <img> src=
+
+    
+    
+    
+    
+    
+    
+    <h2> Sources / Outils </h2>
+    <p>Visualisation n°1 : Wikidata query tools; google sheets graphique; </p>
+    <h3>Visualisation n°1</h3>
+        <p>Code SPARQL : <p>
+        <br/>
+        <code>SELECT ?National_Basketball_Association ?country_of_citizenship ?country_of_citizenshipLabel ?image ?work_period__start_ WHERE {
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+            ?National_Basketball_Association wdt:P118 wd:Q155223;
+              wdt:P27 ?country_of_citizenship;
+              wdt:P18 ?image;
+              wdt:P2031 ?work_period__start_.
+          }
+          LIMIT 3000</code>
+          <br/>
+    </P>
+    </code>
+    </P>
+    
+    
+    
+    
+   
     
     
     
@@ -43,11 +75,7 @@
         </code>
     </p>
 
-    <h1>Visualisation n°2: Images</h1>
-    <h2> Chronologie  NBA Players</h2>
-    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3FNational_Basketball_Association%20%3Fcountry_of_citizenship%20%3Fcountry_of_citizenshipLabel%20%3Fimage%20%3Fwork_period__start_%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3FNational_Basketball_Association%20wdt%3AP118%20wd%3AQ155223%3B%0A%20%20%20%20wdt%3AP27%20%3Fcountry_of_citizenship%3B%0A%20%20%20%20wdt%3AP18%20%3Fimage%3B%0A%20%20%20%20wdt%3AP2031%20%3Fwork_period__start_.%0A%7D%0ALIMIT%20300" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    
 
-    <h2> Classement photos Basketteurs NBA par "brightness"</h2>
-    <img> src=
-
+   
     

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 01 - wikidata et rawgraphs</title>
+</head>
+<body>
+    <h1> Exercice n.o 01 </h1>
+    <h2>Coparaison des occupations des gens entérrés dans le cimetierre du Père lachaise</h2>
+    <p> Ce diagramme montre les rapports de quatité qui existent entre  les métiers des personnes entérrées au P. Lachaise</p>
+    <p> la requète est :</p>
+    <p>
+        <code>
+            SELECT ?Père_Lachaise_Cemetery ?award_received ?award_receivedLabel ?given_name ?given_nameLabel ?family_name ?family_nameLabel WHERE {
+                SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+                OPTIONAL {  }
+                ?Père_Lachaise_Cemetery wdt:P119 wd:Q311.
+                OPTIONAL { ?Père_Lachaise_Cemetery wdt:P735 ?given_name. }
+                OPTIONAL { ?Père_Lachaise_Cemetery wdt:P734 ?family_name. }
+                OPTIONAL {  }
+              }
+              LIMIT 10000
+            
+
+        </code>
+    </p>
+
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3FP%C3%A8re_Lachaise_Cemetery%20%3Faward_received%20%3Faward_receivedLabel%20%3Foccupation%20%3FoccupationLabel%20%3FP%C3%A8re_Lachaise_CemeteryLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20OPTIONAL%20%7B%20%20%7D%0A%20%20%3FP%C3%A8re_Lachaise_Cemetery%20wdt%3AP119%20wd%3AQ311.%0A%0A%20%20%0A%20%20OPTIONAL%20%7B%20%3FP%C3%A8re_Lachaise_Cemetery%20wdt%3AP106%20%3Foccupation.%20%7D%0A%7D%0ALIMIT%2010000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+     <h2> Graphique  fait avec Rawgraphs</h2>
+
+     <div> <a> href="viz (1).svg"><img src="viz (1).svg" width="500"></a></div>
