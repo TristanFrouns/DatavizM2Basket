@@ -4,56 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rendu Cours Intensif Dataviz / NBA PLAYERS - COUNTRY OF ORIGIN</title>
+    <style>
+        body {
+            margin-left: 125px; /* Ajustez la valeur de la marge selon vos besoins */
+            margin-right: 125px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
+        iframe, img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <h2> Visualisations </h2>
-    <h3> Données quantitatives:</h3>
+    <h1> Visualisation 1 Graphiques </h1>
+    <h2> Graphique 1 : Part de joueurs draftés aux us et dans le reste du monde de 1934 à 2020</h2>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUEC-6_6h_jkzr7lBeN5rJSKhWSGZWG8W8AhjAIgZ7LPBfrrfwdpsCYRYjUGsTsCGsxAZOI651fjrJ/pubchart?oid=1972502627&amp;format=interactive"></iframe></p>
-    <p></p>
-    <h3> Données temporelles:</h3>
+    <br/>
+    <h2> Graphique 2 : Nombre de drafts aux USA et dans le reste du monde par année de 1934 à 2020</h2>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRZxsjMZuj36oOlZaSkRXcuyneUOOfuhNF2TFB3oV3riV2FDETR4MsEoZ_1qZdwFQ9YpPr3Kv4MfuMv/pubchart?oid=1185754650&amp;format=interactive"></iframe></p>
+    <br/>
+    <h2> Graphique 3 : Nombre de drafts aux USA et dans le reste du monde par année de 1934 à 2020</h2>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRZxsjMZuj36oOlZaSkRXcuyneUOOfuhNF2TFB3oV3riV2FDETR4MsEoZ_1qZdwFQ9YpPr3Kv4MfuMv/pubchart?oid=1323319109&amp;format=interactive"></iframe> </p>
-    <h3> Données spatiales:</h3>
+    <br/>
+    <h2> Graphique 4 : Pays d'origine des joueurs de NBA draftés de 1934 à 2020 </h2>
     <p> <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUEC-6_6h_jkzr7lBeN5rJSKhWSGZWG8W8AhjAIgZ7LPBfrrfwdpsCYRYjUGsTsCGsxAZOI651fjrJ/pubchart?oid=606310759&amp;format=interactive"></iframe> </p>
-    
-    <h2> Visualisation n°2: Chronologie  NBA Players</h2> 
-    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3FNational_Basketball_Association%20%3Fcountry_of_citizenship%20%3Fcountry_of_citizenshipLabel%20%3Fimage%20%3Fwork_period__start_%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3FNational_Basketball_Association%20wdt%3AP118%20wd%3AQ155223%3B%0A%20%20%20%20wdt%3AP27%20%3Fcountry_of_citizenship%3B%0A%20%20%20%20wdt%3AP18%20%3Fimage%3B%0A%20%20%20%20wdt%3AP2031%20%3Fwork_period__start_.%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>    <h2> Visualisation n°3: Classement photos Basketteurs NBA par "brightness"</h2>
+    <br/><br/>
+    <h2> Visualisation n°2: Timeline avec photographie des NBA Players</h2> 
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3ATimeline%0ASELECT%20%3FNational_Basketball_Association%20%3Fcountry_of_citizenship%20%3Fcountry_of_citizenshipLabel%20%3Fimage%20%3Fwork_period__start_%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3FNational_Basketball_Association%20wdt%3AP118%20wd%3AQ155223%3B%0A%20%20%20%20wdt%3AP27%20%3Fcountry_of_citizenship%3B%0A%20%20%20%20wdt%3AP18%20%3Fimage%3B%0A%20%20%20%20wdt%3AP2031%20%3Fwork_period__start_.%0A%7D%0ALIMIT%20100" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>   
+   
+    <br/><br/>
+   
+    <h2> Visualisation 3 : Classement des photos des nba Players par brightness </h2>
     <img src="./src/brightness.png"/>
     <img src="./src/plot.png"/>
 
-    <h2> Sources / Outils </h2>
-    <p>Visualisation n°1 : Wikidata query tools; google sheets graphique; </p>
-    <h3>Visualisation n°1</h3>
-        <p>Code SPARQL : <p>
-        <br/>
-        <code>SELECT ?National_Basketball_Association ?country_of_citizenship ?country_of_citizenshipLabel ?image ?work_period__start_ WHERE {
-            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-            ?National_Basketball_Association wdt:P118 wd:Q155223;
-              wdt:P27 ?country_of_citizenship;
-              wdt:P18 ?image;
-              wdt:P2031 ?work_period__start_.
-          }
-          LIMIT 3000</code>
-          <br/>
-    </P>
-    </code>
-    </P>
+    <br/><br/>
     
-    
-    
-    
-   
-    
-    
-    
-    <h2>Dataset</h1>
+    <h1> Sources / Outils </h1>
+    <h3>Visualisation n°1</h3> 
+    <p>Graphique 1 : Camembert, réalisé à partir de l'outil "graphique " de Google sheets.</p>
+    <p>Graphique 2 : Courbe de répartition, réalisé à partir de l'outil "graphique " de Google sheets.</p>
+    <p>Graphique 3 : Diagramme bâtons, réalisé à partir de l'outil "graphique " de Google sheets.</p>
+    <p>Graphique 4 : Cartographie, réalisée à partir de l'outil "graphique" de Google sheets.</p> 
+    <strong>Dataset: </strong> 
     <p> Ces Diagrammes ont été réalisés  à partir de l'outil  Query SPARQL du site WikiData et ont été transformés à l'aide de  CHAT GPT4. </p>
-    <h3>Voici la requette SPARQL</h3> 
+    <p>Voici les requette SPARQL</p> 
     <p>
-
-   
-
-
 
         <code>
     
@@ -69,6 +70,36 @@
 
         </code>
     </p>
+ 
+
+    
+    <h2>Visualisation n°2</h2>
+        
+    <p>Réalisé avec l'outil Query  de wikidata.com<br/> 
+        Code SPARQL : </p>
+        <br/>
+        <code>SELECT ?National_Basketball_Association ?country_of_citizenship ?country_of_citizenshipLabel ?image ?work_period__start_ WHERE {
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+            ?National_Basketball_Association wdt:P118 wd:Q155223;
+              wdt:P27 ?country_of_citizenship;
+              wdt:P18 ?image;
+              wdt:P2031 ?work_period__start_.
+          }
+          LIMIT 3000</code>
+          <br/>
+    </P>
+    </code>
+    </P>
+    
+    <h2> Visualisation n°3</h2>
+       
+    <p>Cette visualisation a été réalisée via l'outil https://ereyes.github.io/archivesvisu/mij_v01.html et faite à partir d'images obtenues sur Kaggle : https://www.kaggle.com/datasets/szymonjwiak/nba-active-players-data-images</p>
+    
+
+   
+
+    
+
 
     
 
